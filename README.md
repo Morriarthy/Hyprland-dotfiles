@@ -1,5 +1,5 @@
 # Hyprland-dotfiles
-Archlinux Hyprland dotfiles from my Tuxedo Notebook
+Archlinux Hyprland dotfiles from my Tuxedo Notebook like for my .bashrc, .vimcrc and so on... 
 
  ## Hyprland
  This will include all the configuration files for Hyprland.
