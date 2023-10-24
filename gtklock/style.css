@@ -1,0 +1,21 @@
+window#DP-5 {
+	background-image: url("/usr/share/sddm/themes/abstractdark-sddm-theme/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+window#DP-7 {
+	background-image: url("/usr/share/sddm/themes/abstractdark-sddm-theme/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+window#eDP-1 {
+	background-image: url("/usr/share/sddm/themes/abstractdark-sddm-theme/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
