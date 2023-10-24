@@ -1,6 +1,8 @@
 # Hyprland-dotfiles
 Archlinux Hyprland dotfiles from my Tuxedo Notebook. 
+
 It will include the configurations for my .bashrc, .vimrc and the following ... 
+
 ![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/c9c2ff8a0a260496102e3de084bae539711dab27/2023-09-20-design.png
 "Screenshot of my Hyprland Theme and desktops.")
 
