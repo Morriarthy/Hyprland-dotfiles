@@ -1,0 +1,44 @@
+* {
+  font-family: Rajdhani, FontAwesome, Roboto;
+}
+
+window {
+  margin: 0px;
+  border-shadow: 2px 2px 2px black;
+border: 5px solid #36322f;
+  border-shadow: 2px 2px 2px 2px;
+}
+
+#input {
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 0px #36322f;
+  background-color: #36322f;
+  color: white;
+}
+
+#inner-box {
+  margin: 5px;
+  background-color: #211f1f;
+}
+
+#outer-box {
+  margin: 0px;
+  padding: 5px;
+  background-color: #211f1f;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#text {
+  margin: 5px;
+  color: white;
+}
+
+#entry:selected {
+  background-color: #36322f;
+}
+
+#text:selected {
+  text-decoration-color: white;
+}
