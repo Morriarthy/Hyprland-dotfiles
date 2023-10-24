@@ -1,0 +1,160 @@
+* {
+  border-radius: 10;
+  font-family: Rajdhani, FontAwesome, Roboto;
+  font-size: 11px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: white;
+transition-property: background-color;
+transition-duration: 1s;
+}
+
+tooltip {
+  background: transparent;
+  box-shadow: 2px 2px 2px black;
+  border-width: 2px;
+  border-color: #211f1f;
+  color: white; 
+  background-color: #36322f;                                                    
+  font-family: Rajdhani, FontAwesome, Roboto;
+  border-radius: 5px 5px 5px 5px;                                                 
+  margin-left: 10px;                                                              
+  margin-right: 10px;                                                             
+  padding-left: 10px;                                                             
+  padding-right: 10px; 
+}
+
+#workspaces button {
+  padding: 0px 10px;
+  color: #cfc9c2;
+}
+
+#workspaces button.focused {
+  box-shadow: 2px 2px 2px black;
+  color: white;
+  background-color: #36322f;
+  border-radius: 5px;
+}
+
+#workspaces button.urgent {
+  color: #24283b;
+  background-color: #7bc275;
+  border-radius: 5px;
+}
+
+#workspaces button:hover {
+  background-color: #5cefff;
+  color: #24283b;
+  border-radius: 5px;
+}
+
+#clock,
+#battery,
+#disk,
+#pulseaudio,
+#workspaces,
+#language,
+#cpu,
+#memory,
+#network,
+#temperature,
+#tray,
+#window,
+#custom-power,
+#custom-updater,
+#mode,
+#idle_inhibitor,
+#backlight {
+  background-color: #211f1f;
+border-radius: 5px 5px 5px 5px;
+margin-left: 10px;
+margin-right: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+#workspaces {
+border-radius: 5px 5px 5px 5px;
+margin-left: 5px;
+margin-right: 5px;
+padding-left: 5px;
+padding-right: 5px;
+}
+
+#clock {
+  color: white;
+font-family: Rajdhani, FontAwesome, Roboto;
+border-radius: 5px 5px 5px 5px;
+margin-left: 10px;
+margin-right: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+#custom-cava.Playing {
+    background: rgb(137, 180, 250);
+    background: radial-gradient(circle, rgba(137, 180, 250, 120) 0%, rgba(142, 179, 250, 120) 6%, rgba(148, 226, 213, 1) 14%, rgba(147, 178, 250, 1) 14%, rgba(155, 176, 249, 1) 18%, rgba(245, 194, 231, 1) 28%, rgba(158, 175, 249, 1) 28%, rgba(181, 170, 248, 1) 58%, rgba(205, 214, 244, 1) 69%, rgba(186, 169, 248, 1) 69%, rgba(195, 167, 247, 1) 72%, rgba(137, 220, 235, 1) 73%, rgba(198, 167, 247, 1) 78%, rgba(203, 166, 247, 1) 100%);
+    background-size: 400% 400%;
+    animation: gradient_f 9s cubic-bezier(.72, .39, .21, 1) infinite;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+    font-weight: bold;
+    color: #fff;
+}
+
+#custom-cava.Paused,
+#custom-cava.Stopped {
+    background: #211f1f;
+}
+
+#battery {
+  color: white;
+border-radius: 5px 5px 5px 5px;
+margin-left: 10px;
+margin-right: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+#backlight {
+  color: white;
+border-radius: 5px 5px 5px 5px;
+margin-left: 10px;
+margin-right: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+#idle_inhibitor {
+  color: white;
+
+}
+
+#battery.charging {
+  color: #7bc275;
+}
+
+#battery.warning:not(.charging) {
+  background-color: #fcce7b;
+  color: #2a2e38;
+}
+
+#language {
+  color: white;
+border-radius: 5px 5px 5px 5px;
+margin-left: 10px;
+margin-right: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+#pulseaudio {
+  color: white;
+border-radius: 5px 5px 5px 5px;
+margin-left: 10px;
+margin-right: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
