@@ -3,6 +3,9 @@ Archlinux Hyprland dotfiles from my Tuxedo Notebook like for my .bashrc, .vimrc 
 
  ## Hyprland
  This will include all the configuration files for Hyprland.
+
+ ## Mako
+ This will include the configuaration for notifications created by mako.
  
  ## Waybar
  This will include all the configuration files for Waybar.
