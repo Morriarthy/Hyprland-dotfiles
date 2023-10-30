@@ -14,6 +14,10 @@ It will include the configurations for my .bashrc, .vimrc and the following ...
  
  ## Waybar
  This will include all the configuration files for Waybar.
+
+![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/8cdc764a4a28d39b87ffcb5c12462d300e3bfd33/screenshots/20231030_14h12m36s_grim.png "Waybar")
+
+![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/8cdc764a4a28d39b87ffcb5c12462d300e3bfd33/screenshots/20231030_14h12m02s_grim.png "Waybar alternatives clicked")
  
  ## Wofi
  This will include all the configuration files for Wofi.
