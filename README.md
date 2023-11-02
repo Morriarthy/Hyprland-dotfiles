@@ -16,6 +16,8 @@ The Dots will include the configurations for my .bashrc, .vimrc and more...
 
  ## Mako
  This will include the configuaration for notifications created by mako.
+
+![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/ee3308240a3a9e288c691ebe390ed183649f8816/screenshots/20231102_13h01m10s_grim.png "example of a mako message")
  
  ## Waybar
  This will include all the configuration files for Waybar.
