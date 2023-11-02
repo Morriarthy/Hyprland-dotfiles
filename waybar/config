@@ -7,9 +7,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["idle_inhibitor", "backlight", "keyboard-state", "hyprland/language", "custom/updater", "tray", "keyboard-state", "pulseaudio", "custom/cava", "custom/media", "hyprland/window"],
-    "modules-center": ["hyprland/scratchpad", "hyprland/workspaces", "hyprland/mode"],
-    "modules-right": ["network", "disk", "cpu", "memory", "temperature", "battery", "battery#bat2", "clock", "custom/power"],
+    "modules-left": ["idle_inhibitor", "hyprland/workspaces", "keyboard-state", "hyprland/language", "custom/updater", "tray", "keyboard-state", "pulseaudio", "backlight"],
+    "modules-center": ["hyprland/scratchpad", "hyprland/window", "hyprland/mode"],
+    "modules-right": ["network", "disk", "cpu", "memory", "temperature", "battery", "clock", "custom/power"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -58,13 +58,10 @@
     "wlr/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
+	"hyprland/window": {
+		"max-length": 200,
+	 	"separate-outputs": true
+	},
 	// updater-custom
 	"custom/updater":{
         "format": " {}  ",
@@ -122,8 +119,8 @@
 		"rotate": 0,
         //"timezone": "Europe/Berlin",
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
-        "format": "{:%H:%M}   ",
-        "format-alt": "{:%A  %d %b  %G}   "
+        "format": "{:%A, %H:%M }   ",
+        "format-alt": "{:%A, der %d-te %B  %G}   "
     },    
 
     "cpu": {

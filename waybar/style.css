@@ -133,12 +133,13 @@ padding-right: 10px;
 }
 
 #battery.charging {
-  color: #7bc275;
+  background-color: #36322f;
+  color: white;
 }
 
 #battery.warning:not(.charging) {
-  background-color: #fcce7b;
-  color: #2a2e38;
+  background-color: #36322f;
+  color: white;
 }
 
 #language {
