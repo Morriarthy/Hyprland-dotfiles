@@ -32,4 +32,4 @@ The Dots will include the configurations for my .bashrc, .vimrc and more...
 
  ## GTKlock
  This contains all the configuration files for the lockscreen programm [GTKlock](https://github.com/jovanlanik/gtklock/tree/master) I am using.
- ![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/d196abd08587b8108c49fc100f1c13af7ff7709e/screenshots/20231109_13h01m25s_grim.png "GTKlock")
+ ![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/2c0d313e015c24b71aefd2047730dbbcd93676ff/screenshots/20231109_13h49m56s_grim.png "GTKlock")
