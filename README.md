@@ -12,7 +12,7 @@ The Dots will include the configurations for my .bashrc, .vimrc and more...
 "Screenshot of my Hyprland Theme and desktops.")
 
  ## Hyprland
- This will include all the configuration files for Hyprland.
+ This includes all the configuration files for [Hyprland](https://wiki.hyprland.org/Getting-Started/Installation/) .
 
  ## Mako
  This will include the configuaration for notifications created by mako.
