@@ -31,4 +31,5 @@ The Dots will include the configurations for my .bashrc, .vimrc and more...
  ![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/c9c2ff8a0a260496102e3de084bae539711dab27/screenshots/20230921_12h59m48s_grim.png "Wofi Menu")
 
  ## GTKlock
- This will include all the configuration files for GTKlock in the future.
+ This contains all the configuration files for the lockscreen programm [GTKlock](https://github.com/jovanlanik/gtklock/tree/master) I am using.
+ ![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/d196abd08587b8108c49fc100f1c13af7ff7709e/screenshots/20231109_13h01m25s_grim.png "GTKlock")
