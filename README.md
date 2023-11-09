@@ -32,6 +32,3 @@ The Dots will include the configurations for my .bashrc, .vimrc and more...
 
  ## GTKlock
  This will include all the configuration files for GTKlock in the future.
- 
- ## EWW
- This will include all the configuration files for the future EWW.
