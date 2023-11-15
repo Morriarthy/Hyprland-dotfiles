@@ -17,6 +17,8 @@ The Dots will include the configurations for my .bashrc, .vimrc and more...
  ## Mako
  This configuaration file contains the settings for notifications created by mako.
 
+Add mako to hyprland.conf so it executes mako at the start with the config. (I am still checking makoctl and how it loads the config.)
+exec-once = mako -c ~/.config/mako/config
 ![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/ee3308240a3a9e288c691ebe390ed183649f8816/screenshots/20231102_13h01m10s_grim.png "example of a mako message")
  
  ## Waybar
