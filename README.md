@@ -17,7 +17,8 @@ The Dots will include the configurations for my .bashrc, .vimrc and more...
  ## Mako
  This configuaration file contains the settings for notifications created by mako.
 
-Add mako to hyprland.conf so it executes mako at the start with the config. (I am still checking makoctl and how it loads the config.)
+Add mako to hyprland.conf so it executes mako at the start with the config. 
+(I am still checking makoctl and how it loads the config.)
 
 exec-once = mako -c ~/.config/mako/config
 
