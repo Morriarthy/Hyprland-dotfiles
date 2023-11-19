@@ -105,8 +105,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": " ",
+            "deactivated": " "
         }
     },
     "tray": {
@@ -133,7 +133,7 @@
         "on-click": "kitty -e btop"
     },
     "memory": {
-        "format": "{}% ",
+        "format": "{}%  ",
         "on-click": "kitty -e btop"
     },
     "temperature": {
@@ -169,11 +169,11 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%)  ",
-        "format-ethernet": "{ipaddr}/{cidr}  ",
-        "tooltip-format": "{ifname} via {gwaddr}  ",
-        "format-linked": "{ifname} (No IP)  ",
-        "format-disconnected": "Disconnected  ⚠",
+        "format-wifi": "{essid} ({signalStrength}%)   ",
+        "format-ethernet": "{ipaddr}/{cidr}   ",
+        "tooltip-format": "{ifname} via {gwaddr}   ",
+        "format-linked": "{ifname} (No IP)   ",
+        "format-disconnected": "Disconnected  ⚠ ",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "on-click": "nm-applet"
     },
@@ -203,7 +203,7 @@
     },
 
     "custom/power": {
-         "format": " ",
+         "format": "  ",
          "tooltip": false,
     //     "on-click": "$HOME/.config/hypr/scripts/wlogout",
 		 "on-click": "sleep 0.1 && ~/.config/hypr/scripts/powermenu.sh",
