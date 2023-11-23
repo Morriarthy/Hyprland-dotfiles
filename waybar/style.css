@@ -40,9 +40,9 @@ tooltip {
 }
 
 #workspaces button.urgent {
-  color: #211f1f;
+  color: #36322f;
   background-color: #white;
-  border-color: #36322f;
+  border-color: #211f1f;
   border-radius: 5px;
 }
 
