@@ -7,7 +7,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["idle_inhibitor", "keyboard-state", "backlight", "hyprland/language", "custom/updater", "tray", "keyboard-state", "pulseaudio", "cava"],
+    "modules-left": ["idle_inhibitor", "keyboard-state", "backlight", "hyprland/language", "custom/updater", "tray", "pulseaudio", "cava"],
     "modules-center": ["hyprland/scratchpad", "hyprland/window",  "hyprland/workspaces", "hyprland/mode"],
     "modules-right": ["network", "disk", "cpu", "memory", "temperature", "battery", "clock", "custom/power"],
     // Modules configuration
