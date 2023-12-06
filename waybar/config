@@ -7,9 +7,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["idle_inhibitor", "keyboard-state", "backlight", "hyprland/language", "custom/updater", "tray", "pulseaudio", "cava"],
+    "modules-left": ["clock", "idle_inhibitor", "backlight", "hyprland/language", "custom/updater", "pulseaudio", "cava"],
     "modules-center": ["hyprland/scratchpad", "hyprland/window",  "hyprland/workspaces", "hyprland/mode"],
-    "modules-right": ["network", "disk", "cpu", "memory", "temperature", "battery", "clock", "custom/power"],
+    "modules-right": ["network", "disk", "cpu", "memory", "temperature", "keyboard-state", "battery", "custom/power"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -52,7 +52,7 @@
 		"format-en": "US",
 		"format-de": "DE",
 		"format-fi": "FI",
-		"on-click": "hyprctl switchxkblayout company--usb-device- next"
+		"on-click": "$HOME/.config/hypr/scripts/SwitchKeyboardLayout.sh"
     },
     	
     "wlr/mode": {
@@ -105,8 +105,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": " ",
-            "deactivated": " "
+            "activated": " ",
+            "deactivated": " "
         }
     },
     "tray": {
@@ -204,7 +204,7 @@
       
 	"cava": {                                                                       
 	//"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",                         
-	"framerate": 60,                                                            
+	"framerate": 30,                                                            
 	"autosens": 1,                                                              
 	//"sensitivity": 100,                                                       
 	"bars": 10,                                                                 
@@ -218,7 +218,7 @@
 	"monstercat": false,                                                        
 	"waves": false,                                                             
 	"noise_reduction": 0.77,                                                    
-	"input_delay": 0.125,                                                       
+	"input_delay": 2.0,                                                       
 	"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],                 
 	"actions": {                                                                
 	    "on-click-right": "mode"                                                
