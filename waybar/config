@@ -52,7 +52,7 @@
 		"format-en": "US",
 		"format-de": "DE",
 		"format-fi": "FI",
-		"on-click": "$HOME/.config/hypr/scripts/SwitchKeyboardLayout.sh"
+		"on-click": "$HOME/.config/hypr/scripts/switch_keyboard-layout.sh"
     },
     	
     "wlr/mode": {
