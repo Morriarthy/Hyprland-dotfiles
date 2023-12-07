@@ -7,9 +7,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["clock", "idle_inhibitor", "backlight", "hyprland/language", "custom/updater", "pulseaudio", "cava"],
+    "modules-left": ["idle_inhibitor", "backlight", "clock", "tray",  "custom/updater", "pulseaudio", "cava"],
     "modules-center": ["hyprland/scratchpad", "hyprland/window",  "hyprland/workspaces", "hyprland/mode"],
-    "modules-right": ["network", "disk", "cpu", "memory", "temperature", "keyboard-state", "battery", "custom/power"],
+    "modules-right": ["network", "disk", "cpu", "memory", "temperature", "keyboard-state", "hyprland/language", "battery", "custom/power"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -52,6 +52,7 @@
 		"format-en": "US",
 		"format-de": "DE",
 		"format-fi": "FI",
+		"tooltip": "false",
 		"on-click": "$HOME/.config/hypr/scripts/switch_keyboard-layout.sh"
     },
     	
@@ -113,15 +114,37 @@
         // "icon-size": 21,
         "spacing": 10
     },
-    "clock": {
-		"interval": 60,
-		"align": 0,
-		"rotate": 0,
-        //"timezone": "Europe/Berlin",
-        "tooltip-format": "<tt><big>{calendar}</big></tt>",
-        "format": "{:%A, %H:%M }   ",
-        "format-alt": "{:%A, der %d-te %B  %G}   "
-    },    
+//    "clock": {
+//		"interval": 60,
+//		"align": 0,
+//		"rotate": 0,
+//        //"timezone": "Europe/Berlin",
+//        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+//        "format": "{:%A, %H:%M }   ",
+//        "format-alt": "{:%A, der %d-te %B  %G}   "
+//    },    
+
+   "clock": {                                                                    
+     "interval": 1,                                                              
+     //"format": "  {:%I:%M %p}",                                                
+     "format": "  {:%H:%M - %A}",                                                  
+     "format-alt": "  {:%A ,  %d %B %Y}",                                
+     "tooltip-format": "<tt><small>{calendar}</small></tt>",
+	 //"tooltip-format": "\n<span size='10pt' font='Rajdhani'>{calendar}</span>",                     
+     "calendar": {                                                               
+       "mode"          : "month",                                                 
+       "mode-mon-col"  : 3,                                                      
+       "weeks-pos"     : "right",                                                
+       "on-scroll"     : 1,                                                      
+       "format": {                                                               
+       "months":     "<span color='#ffffff' size='14pt' font='Rajdhani'><b>{}</b></span>",                   
+       "days":       "<span color='#211f1f' size='11pt' ><b>{}</b></span>",                   
+       "weeks":      "<span color='#808080' size='13pt' font='Rajdhani'><b>W{}</b></span>",                  
+       "weekdays":   "<span color='#808080' size='11pt' ><b><u>{}</u></b></span>",                   
+       "today":      "<span color='#ffead3' size='11pt'><b>{}</b></span>"             
+                 }                                                               
+                 }                                                               
+     },
 
     "cpu": {
         "format": "{usage}% ",
