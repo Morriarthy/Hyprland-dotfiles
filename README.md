@@ -27,9 +27,9 @@ exec-once = mako -c ~/.config/mako/config
  ## Waybar
  This will include all the configuration files for [Waybar](https://github.com/Alexays/Waybar).
 
-![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/8cdc764a4a28d39b87ffcb5c12462d300e3bfd33/screenshots/20231030_14h12m36s_grim.png "Waybar")
+![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/main/screenshots/swappy-20240109_113246.png "Waybar")
 
-![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/8cdc764a4a28d39b87ffcb5c12462d300e3bfd33/screenshots/20231030_14h12m02s_grim.png "Waybar alternatives clicked")
+![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/main/screenshots/20240109_11h53m07s_grim.png "Waybar alternatives clicked")
 
 Now Cava is also build into Waybar:
 ![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/7e20876bcc3dd65dbe0fe05763121cbcceada27a/screenshots/20231120_18h12m46s_grim.png "Waybar with Cava running")
