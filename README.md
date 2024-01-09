@@ -5,6 +5,10 @@ Tuxedo uses for its notebook keyboards the following Font and because I liked it
 
 [Rajdhani @ Google Fonts](https://fonts.google.com/specimen/Rajdhani)
 
+I use the following GTK: 
+
+["adw-gtk3-dark"](https://www.pling.com/p/1779168)
+
 
 The Dots will include the configurations for my .bashrc, .vimrc and more... 
 
