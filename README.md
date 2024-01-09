@@ -38,6 +38,8 @@ Now Cava is also build into Waybar:
  This will include all the configuration files for Wofi.
  ![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/c9c2ff8a0a260496102e3de084bae539711dab27/screenshots/20230921_12h59m48s_grim.png "Wofi Menu")
 
+![alt_text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/main/screenshots/20240109_11h57m53s_grim.png "Wofi Menu zoomed in")
+
  ## GTKlock
  This contains all the configuration files for the lockscreen programm [GTKlock](https://github.com/jovanlanik/gtklock/tree/master) I am using.
  ![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/2c0d313e015c24b71aefd2047730dbbcd93676ff/screenshots/20231109_13h49m56s_grim.png "GTKlock")
