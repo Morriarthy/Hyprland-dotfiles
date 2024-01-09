@@ -7,9 +7,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["idle_inhibitor", "backlight", "clock", "tray",  "custom/updater", "pulseaudio"],
+    "modules-left": ["disk", "cpu", "memory", "keyboard-state", "hyprland/language", "temperature", "network"],
     "modules-center": ["hyprland/scratchpad", "hyprland/window",  "hyprland/workspaces", "hyprland/mode"],
-    "modules-right": ["network", "disk", "cpu", "memory", "temperature", "keyboard-state", "hyprland/language", "battery", "custom/power"],
+    "modules-right": ["custom/updater", "tray", "idle_inhibitor", "backlight", "pulseaudio", "clock", "battery", "custom/power"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -34,7 +34,7 @@
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
-        "format": "{name} {icon}",
+        "format": " {name}  {icon} ",
         "format-icons": {
             "locked": "",
             "unlocked": ""
