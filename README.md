@@ -33,6 +33,9 @@ exec-once = mako -c ~/.config/mako/config
 
 Now Cava is also build into Waybar:
 ![alt text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/7e20876bcc3dd65dbe0fe05763121cbcceada27a/screenshots/20231120_18h12m46s_grim.png "Waybar with Cava running")
+
+Cava can be added to Waybar by simply adding "cava" to the modules which can be seen in the Terminal at line 10 at the end:
+![alt_text](https://github.com/Morriarthy/Hyprland-dotfiles/blob/main/screenshots/20240109_12h06m58s_grim.png "Waybar running Cava and showing the section of the Waybar modules in the terminal")
  
  ## Wofi
  This will include all the configuration files for Wofi.
