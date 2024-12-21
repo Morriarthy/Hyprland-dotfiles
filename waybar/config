@@ -7,8 +7,8 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["disk", "cpu", "memory", "keyboard-state", "hyprland/language", "temperature", "network"],
-    "modules-center": ["hyprland/scratchpad", "hyprland/window",  "hyprland/workspaces", "hyprland/mode"],
+    "modules-left": ["disk", "cpu", "memory", "keyboard-state", "hyprland/language", "temperature", "network", "hyprland/window" ],
+    "modules-center": ["hyprland/scratchpad", "hyprland/workspaces", "hyprland/mode"],
     "modules-right": ["custom/updater", "tray", "idle_inhibitor", "backlight", "pulseaudio", "clock", "battery", "custom/power"],
     // Modules configuration
      "hyprland/workspaces": {
@@ -60,7 +60,6 @@
         "format": "<span style=\"italic\">{}</span>"
     },
 	"hyprland/window": {
-		"max-length": 200,
 	 	"separate-outputs": true
 	},
 	// updater-custom
@@ -69,7 +68,7 @@
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) ]]",
         "interval": 15,
-        "on-click": "kitty -e yay -Syu && notify-send 'The system has been updated' "
+        "on-click": "kitty -e sudo pacman -Syu && paru -Syu && notify-send 'The system has been updated' "
     },
     "hyprland/window": {
       "format": "{text}",
