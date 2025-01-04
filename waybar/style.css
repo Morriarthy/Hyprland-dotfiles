@@ -1,7 +1,7 @@
 * {
   border-radius: 10px;
   font-family: Rajdhani, FontAwesome, Roboto;
-  font-size: 11px;
+  font-size: 16px;
   min-height: 0;
 }
 
@@ -56,6 +56,7 @@ tooltip {
 #cava,
 #battery,
 #disk,
+#disk.disk2,
 #pulseaudio,
 #workspaces,
 #language,

@@ -7,9 +7,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["disk", "cpu", "memory", "keyboard-state", "hyprland/language", "temperature", "network", "hyprland/window" ],
+    "modules-left": ["disk", "disk#disk2",  "cpu", "memory", "temperature", "keyboard-state", "hyprland/language", "hyprland/window" ],
     "modules-center": ["hyprland/scratchpad", "hyprland/workspaces", "hyprland/mode"],
-    "modules-right": ["custom/updater", "tray", "idle_inhibitor", "backlight", "pulseaudio", "clock", "battery", "custom/power"],
+    "modules-right": ["network", "custom/updater", "tray", "idle_inhibitor", "backlight", "pulseaudio", "clock", "battery", "custom/power"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -25,7 +25,7 @@
              "6": "  ",
              "7": "  ",
              "8": "  ",
-             "9": "  ",
+             "9": "  ",
              "urgent": "  ",
              "focused": "  ",
              "default": "  "
@@ -43,9 +43,18 @@
 
 	// waybar-disk
     "disk": {
+		 "disk": "DISK1",
          "interval": 30,
          "format": "{free} free on  ",
+		 "path": "/"
     },
+    "disk#disk2": {
+		 "disk": "DISK2",
+         "interval": 30,
+         "format": "{free} free on  ",
+		 "path": "/home/"
+    },
+
 
     "hyprland/language": {
        	"format": "{}  ",
@@ -59,9 +68,7 @@
     "wlr/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-	"hyprland/window": {
-	 	"separate-outputs": true
-	},
+
 	// updater-custom
 	"custom/updater":{
         "format": " {}  ",
@@ -71,8 +78,6 @@
         "on-click": "kitty -e sudo pacman -Syu && paru -Syu && notify-send 'The system has been updated' "
     },
     "hyprland/window": {
-      "format": "{text}",
-      "max_length": 50,
 	  "separate-outputs": true,
       "ellipsis": true
     },
