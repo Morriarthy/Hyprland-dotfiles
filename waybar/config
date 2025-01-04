@@ -1,7 +1,7 @@
 {
      "layer": "top", // Waybar at top layer
     //"position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 32, // Waybar height (to be removed for auto height)
+    "height": 38, // Waybar height (to be removed for auto height)
 	"fixed-center": true,
 	"margin-top": 2,  
     // "width": 1280, // Waybar width
@@ -26,6 +26,7 @@
              "7": "  ",
              "8": "  ",
              "9": "  ",
+			 "10": "  ",
              "urgent": "  ",
              "focused": "  ",
              "default": "  "
@@ -131,7 +132,7 @@
    "clock": {                                                                    
      "interval": 1,                                                              
      //"format": "  {:%I:%M %p}",                                                
-     "format": "{:%H:%M - %A}   ",                                                  
+     "format": "{:%H:%M - %A}    ",                                                  
      "format-alt": "{:%A ,  %d %B %Y}   ",                                
      "tooltip-format": "<tt><small>{calendar}</small></tt>",
 	 //"tooltip-format": "\n<span size='10pt' font='Rajdhani'>{calendar}</span>",                     
@@ -254,9 +255,10 @@
 
     "custom/power": {
          "format": "  ",
-         "tooltip": false,
     //     "on-click": "$HOME/.config/hypr/scripts/wlogout",
 		 "on-click": "sleep 0.1 && ~/.config/hypr/scripts/powermenu.sh",
+        "tooltip": true,
+		 "tooltip-format": " Power Options for Shutdown, Lock, Suspend, Logout and Reboot",
 	},
 "custom/cava": {
     "format": "{icon}{}",
