@@ -32,10 +32,17 @@ tooltip {
   color: #cfc9c2;
 }
 
+#workspaces button.active {
+  box-shadow: 1px 4px 1px 1px #211f1f;
+  padding: 0px 10px;
+  background-color: #36322f ;
+  color: white;
+  font-family: Rajdhani, FontAwesome, Roboto;
+}
 #workspaces button.focused {
   box-shadow: 2px 2px 2px white;
   color: white;
-  background-color: #211f1f;
+  background-color: #36322f;
   border-radius: 5px;
 }
 
