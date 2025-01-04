@@ -7,9 +7,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["disk", "disk#disk2",  "cpu", "memory", "temperature", "keyboard-state", "hyprland/language", "hyprland/window" ],
+    "modules-left": ["disk", "disk#disk2",  "cpu", "memory", "temperature", "keyboard-state", "hyprland/window" ],
     "modules-center": ["hyprland/scratchpad", "hyprland/workspaces", "hyprland/mode"],
-    "modules-right": ["network", "custom/updater", "tray", "idle_inhibitor", "backlight", "pulseaudio", "clock", "battery", "custom/power"],
+    "modules-right": ["network", "custom/updater", "tray", "hyprland/language", "idle_inhibitor", "backlight", "pulseaudio", "clock", "battery", "custom/power"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
