@@ -7,7 +7,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["disk", "disk#disk2",  "cpu", "memory", "temperature", "keyboard-state", "hyprland/window" ],
+    "modules-left": ["disk", "disk#disk2",  "cpu", "memory", "temperature", "keyboard-state", "hyprland/window"],
     "modules-center": ["hyprland/scratchpad", "hyprland/workspaces", "hyprland/mode"],
     "modules-right": ["network", "custom/updater", "tray", "hyprland/language", "idle_inhibitor", "backlight", "pulseaudio", "clock", "battery", "custom/power"],
     // Modules configuration
@@ -71,71 +71,41 @@
     },
 
 	// updater-custom
+
 	"custom/updater":{
-        "format": " {}  ",
+        "format": " {}   ",
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) ]]",
         "interval": 15,
-        "on-click": "kitty -e sudo pacman -Syu && paru -Syu && notify-send 'The system has been updated' "
+        "on-click": "kitty -e sudo pacman -Syu && paru -Syu && yay -Syu && notify-send 'The system has been updated' "
     },
+
     "hyprland/window": {
 	  "separate-outputs": true,
       "ellipsis": true
     },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
+
+   "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
             "activated": " ",
             "deactivated": " "
         }
     },
+
     "tray": {
         // "icon-size": 21,
         "spacing": 10
     },
-//    "clock": {
-//		"interval": 60,
-//		"align": 0,
-//		"rotate": 0,
-//        //"timezone": "Europe/Berlin",
-//        "tooltip-format": "<tt><big>{calendar}</big></tt>",
-//        "format": "{:%A, %H:%M }   ",
-//        "format-alt": "{:%A, der %d-te %B  %G}   "
-//    },    
 
-   "clock": {                                                                    
+    "clock": {                                                                    
      "interval": 1,                                                              
      //"format": "  {:%I:%M %p}",                                                
      "format": "{:%H:%M - %A}    ",                                                  
      "format-alt": "{:%A ,  %d %B %Y}   ",                                
      "tooltip-format": "<tt><small>{calendar}</small></tt>",
 	 //"tooltip-format": "\n<span size='10pt' font='Rajdhani'>{calendar}</span>",                     
+
      "calendar": {                                                               
        "mode"          : "month",                                                 
        "mode-mon-col"  : 3,                                                      
@@ -161,7 +131,7 @@
         "on-click": "kitty -e btop"
     },
     "memory": {
-        "format": "{}%  ",
+        "format": "{}%   ",
         "on-click": "kitty -e btop"
     },
     "temperature": {
@@ -192,10 +162,8 @@
         // "format-full": "",
         "format-icons": [" ", " ", " ", " ", " "]
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
-    "network": {
+    
+	"network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%)   ",
         "format-ethernet": "{ipaddr}/{cidr}   ",
@@ -203,7 +171,7 @@
         "format-linked": "{ifname} (No IP)   ",
         "format-disconnected": "Disconnected  ⚠ ",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "nm-applet"
+        "on-click": "kitty -e nmtui"
     },
 
 	"storage":{
@@ -229,30 +197,7 @@
         },
         "on-click": "pavucontrol"
     },
-      
-	"cava": {                                                                       
-	//"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",                         
-	"framerate": 30,                                                            
-	"autosens": 1,                                                              
-	//"sensitivity": 100,                                                       
-	"bars": 10,                                                                 
-	"lower_cutoff_freq": 50,                                                    
-	"higher_cutoff_freq": 10000,                                                
-	"method": "pulse",                                                          
-	"source": "auto",                                                           
-	"stereo": true,                                                             
-	"reverse": false,                                                           
-	"bar_delimiter": 0,                                                         
-	"monstercat": false,                                                        
-	"waves": false,                                                             
-	"noise_reduction": 0.77,                                                    
-	"input_delay": 2.0,                                                       
-	"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],                 
-	"actions": {                                                                
-	    "on-click-right": "mode"                                                
-	}                                                                           
-	},
-
+     
     "custom/power": {
          "format": "  ",
     //     "on-click": "$HOME/.config/hypr/scripts/wlogout",
@@ -260,34 +205,5 @@
         "tooltip": true,
 		 "tooltip-format": " Power Options for Shutdown, Lock, Suspend, Logout and Reboot",
 	},
-"custom/cava": {
-    "format": "{icon}{}",
-    "format-icons": {
-        // "Playing": " ", // Uncomment if not using caway
-        "Paused": " ",
-        "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
-    },
-    "escape": true,
-    "tooltip": true,
-    "exec": "~/.scripts/caway",
-    "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl previous",
-    "on-scroll-down": "playerctl next",
-    "on-click-right": "g4music",
-    "max-length": 35
-},
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
 }
 
