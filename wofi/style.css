@@ -42,7 +42,14 @@ border: 5px solid #36322f;
 #text:selected {
   text-decoration-color: white;
 }
- expander > list > #entry {
-   color: white;
-    background-color: #36322f;
+
+#scroll {
+	margin: 5px;
+    background-color: #36322f; /* Gleiche Hintergrundfarbe wie #input */
+    color: white;
+    border: 1px solid #36322f; /* Gleiche Farbe wie #input Border */
+}
+expander > list > #entry {
+  color: white;
+  background-color: #36322f;
 }
