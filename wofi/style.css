@@ -1,6 +1,5 @@
 * {
   font-family: Rajdhani, FontAwesome, Roboto;
-  font-size: 22px;
 }
 
 window {
@@ -42,4 +41,8 @@ border: 5px solid #36322f;
 
 #text:selected {
   text-decoration-color: white;
+}
+ expander > list > #entry {
+   color: white;
+    background-color: #36322f;
 }
