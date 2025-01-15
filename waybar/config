@@ -7,7 +7,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["disk", "disk#disk2",  "cpu", "memory", "temperature", "keyboard-state", "hyprland/window"],
+    "modules-left": ["disk", "disk#disk2",  "cpu", "memory", "temperature", "custom-nvidia", "keyboard-state", "hyprland/window"],
     "modules-center": ["hyprland/scratchpad", "hyprland/workspaces", "hyprland/mode"],
     "modules-right": ["network", "custom/updater", "tray", "hyprland/language", "idle_inhibitor", "backlight", "pulseaudio", "clock", "battery", "custom/power"],
     // Modules configuration
@@ -65,6 +65,13 @@
 		"tooltip": "false",
 		"on-click": "$HOME/.config/hypr/scripts/switch_keyboard-layout.sh"
     },
+
+	// custom/nvidia
+	"custom-nvidia": {
+		"format": "GPU: {output} W  ",
+		"exec": "~/.config/hypr/scripts/nvidia.sh",
+		"interval": 10
+	},
     	
     "wlr/mode": {
         "format": "<span style=\"italic\">{}</span>"
