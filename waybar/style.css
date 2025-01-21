@@ -76,6 +76,7 @@ tooltip {
 #window,
 #custom-power,
 #custom-updater,
+#custom-nvidia,
 #mode,
 #idle_inhibitor,
 #backlight {
@@ -96,7 +97,7 @@ padding-right: 5px;
 }
 
 #clock {
-color: white;
+  color: white;
 font-family: Rajdhani, FontAwesome, Roboto;
 border-radius: 5px 5px 5px 5px;
 margin-left: 10px;
@@ -104,27 +105,6 @@ margin-right: 10px;
 padding-left: 10px;
 padding-right: 10px;
 }
-
-#custom-updater{
-color: white;
-font-family: Rajdhani, FontAwesome, Roboto;
-border-radius: 5px 5px 5px 5px;
-margin-left: 10px;
-margin-right: 10px;
-padding-left: 10px;
-padding-right: 10px;
-}
-
-#custom-nvidia{
-color: white;
-font-family: Rajdhani, FontAwesome, Roboto;
-border-radius: 5px 5px 5px 5px;
-margin-left: 10px;
-margin-right: 10px;
-padding-left: 10px;
-padding-right: 10px;
-}
-
 
 #custom-cava.Playing {
     background: rgb(137, 180, 250);

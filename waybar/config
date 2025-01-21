@@ -1,16 +1,17 @@
 {
      "layer": "top", // Waybar at top layer
     //"position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 38, // Waybar height (to be removed for auto height)
+    "height": 32, // Waybar height (to be removed for auto height)
 	"fixed-center": true,
 	"margin-top": 2,  
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["disk", "disk#disk2",  "cpu", "memory", "temperature", "custom-nvidia", "keyboard-state", "hyprland/window"],
+    "modules-left": ["disk", "disk#DISK2", "cpu", "memory", "keyboard-state", "temperature", "custom/nvidia", "hyprland/window" ],
     "modules-center": ["hyprland/scratchpad", "hyprland/workspaces", "hyprland/mode"],
-    "modules-right": ["network", "custom/updater", "tray", "hyprland/language", "idle_inhibitor", "backlight", "pulseaudio", "clock", "battery", "custom/power"],
+    "modules-right": ["custom/updater", "network", "hyprland/language", "tray", "idle_inhibitor", "backlight", "pulseaudio", "clock", "battery", "custom/power"],
     // Modules configuration
+
      "hyprland/workspaces": {
          "disable-scroll": true,
 		 "on-click": "activate",
@@ -26,12 +27,13 @@
              "7": "  ",
              "8": "  ",
              "9": "  ",
-			 "10": "  ",
+			 "10": "󰺵 ",
              "urgent": "  ",
              "focused": "  ",
              "default": "  "
          }
      },
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -42,20 +44,21 @@
         }
     },
 
-	// waybar-disk
+	// waybar-disk: /
     "disk": {
 		 "disk": "DISK1",
+		 "path": "/",
          "interval": 30,
          "format": "{free} free on   ",
-		 "path": "/"
-    },
-    "disk#disk2": {
-		 "disk": "DISK2",
-         "interval": 30,
-         "format": "{free} free on   ",
-		 "path": "/home/"
     },
 
+	// waybar-disk: /home
+    "disk#DISK2": {
+		 "disk": "DISK2",
+		 "path": "/home/",
+         "interval": 30,
+         "format": "{free} free on  󰋜 ",
+    },
 
     "hyprland/language": {
        	"format": "{}  ",
@@ -65,51 +68,49 @@
 		"tooltip": "false",
 		"on-click": "$HOME/.config/hypr/scripts/switch_keyboard-layout.sh"
     },
-
+	
 	// custom/nvidia
-	"custom-nvidia": {
-		"format": "GPU: {output} W  ",
-		"exec": "~/.config/hypr/scripts/nvidia.sh",
-		"interval": 10
+	"custom/nvidia": {
+    "format": "GPU: {} W  ",
+    "exec": "$HOME/.config/waybar/nvidia.sh",
+    "interval": 10
 	},
     	
     "wlr/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
 
-	// updater-custom
+	"hyprland/window": {
+	 	"separate-outputs": true
+	},
 
+	// updater-custom
 	"custom/updater":{
-        "format": " {}   ",
+        "format": " {}  ",
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) ]]",
         "interval": 15,
-        "on-click": "kitty -e sudo pacman -Syu && paru -Syu && yay -Syu && notify-send 'The system has been updated' "
+        "on-click": "kitty -e sudo pacman -Syu && paru -Syu && notify-send 'The system has been updated' "
     },
 
-    "hyprland/window": {
-	  "separate-outputs": true,
-      "ellipsis": true
-    },
-
-   "idle_inhibitor": {
+    "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
             "activated": " ",
             "deactivated": " "
-        }
-    },
+						}
+	},
 
     "tray": {
         // "icon-size": 21,
         "spacing": 10
     },
 
-    "clock": {                                                                    
+   "clock": {                                                                    
      "interval": 1,                                                              
      //"format": "  {:%I:%M %p}",                                                
-     "format": "{:%H:%M - %A}    ",                                                  
-     "format-alt": "{:%A ,  %d %B %Y}   ",                                
+     "format": " {:%H:%M - %A}    ",                                                  
+     "format-alt": " {:%A ,  %d %B %Y}   ",                                
      "tooltip-format": "<tt><small>{calendar}</small></tt>",
 	 //"tooltip-format": "\n<span size='10pt' font='Rajdhani'>{calendar}</span>",                     
 
@@ -137,10 +138,12 @@
 //
         "on-click": "kitty -e btop"
     },
+
     "memory": {
-        "format": "{}%   ",
+        "format": "{}%  ",
         "on-click": "kitty -e btop"
     },
+
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -149,28 +152,8 @@
         "format": "{temperatureC}°C {icon}",
         "format-icons": [""]
     },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    //      "format-icons": ["", ""]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}%  ",
-        "format-plugged": "{capacity}%  ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
-    },
-    
-	"network": {
+
+    "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%)   ",
         "format-ethernet": "{ipaddr}/{cidr}   ",
@@ -178,13 +161,9 @@
         "format-linked": "{ifname} (No IP)   ",
         "format-disconnected": "Disconnected  ⚠ ",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "kitty -e nmtui"
+        "on-click": "nm-applet"
     },
 
-	"storage":{
-		"format-icon": " ",
-		"format-icon": ""
-	},
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
@@ -204,13 +183,12 @@
         },
         "on-click": "pavucontrol"
     },
-     
+   
     "custom/power": {
          "format": "  ",
+         "tooltip": false,
     //     "on-click": "$HOME/.config/hypr/scripts/wlogout",
 		 "on-click": "sleep 0.1 && ~/.config/hypr/scripts/powermenu.sh",
-        "tooltip": true,
-		 "tooltip-format": " Power Options for Shutdown, Lock, Suspend, Logout and Reboot",
 	},
 }
 
