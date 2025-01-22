@@ -71,9 +71,11 @@
 	
 	// custom/nvidia
 	"custom/nvidia": {
-    "format": "GPU: {} W  ",
-    "exec": "$HOME/.config/waybar/nvidia.sh",
-    "interval": 10
+	"format": "GPU: {}  ",
+	"tooltip": true,
+	"exec": "~/.config/waybar/nvidia_memory.sh", 
+    	// "exec": "$HOME/.config/waybar/nvidia.sh",
+	"interval": 10
 	},
     	
     "wlr/mode": {
