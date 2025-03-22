@@ -1,6 +1,8 @@
 [manager] 
 show_hidden = true
 ratio = [2, 3, 3]
-sort_by = "mtime"
+sort_by = "alphabetical"
 image_quality = 90
-sort_reverse = true
+sort_reverse = false
+sort_sensitive = false
+show_symlink = true
